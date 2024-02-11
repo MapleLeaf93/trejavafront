@@ -72,7 +72,7 @@ export default function AllPassengers(props)
         <div className="row gy-5 px-3">
                 <div className="col-3 p-4">
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nome o Cognome</span>
+                        <span class="input-group-text" id="basic-addon1">Search</span>
                         <input type="text" ref={nomIn} class="form-control" onChange={()=>setFlicker(!flicker)} />
                     </div>
                     <label for="customRange1" class="form-label">Età Min: {mAge}</label>
