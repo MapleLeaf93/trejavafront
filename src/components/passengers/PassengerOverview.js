@@ -7,8 +7,8 @@ export default function PassengerOverview({id,name,surname,age,deletePassenger})
 {
     return(
         <>
-            <div className="col-3 d-flex justify-content-center text-center">
-                <div class="card" style={{"width":"18rem"}}>
+            <div className="col-3 d-flex justify-content-center text-center flex-wrap"style={{minWidth:"190px"}}>
+                <div class="card">
                     <div class="card-body">
                         <button class="btn btn-outline-dark float-end" onClick={()=> deletePassenger(id)} ><FontAwesomeIcon icon={faTrash} /></button>
                         <br/><br/>

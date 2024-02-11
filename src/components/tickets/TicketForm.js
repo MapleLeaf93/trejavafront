@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function TicketForm(props)
 {
@@ -46,15 +46,17 @@ export default function TicketForm(props)
             <div class="card">
                 <div class="card-body">
                     <div class="input-group mb-3 card-title">
-                        <span class="input-group-text" >Class</span>
+                        <span class="input-group-text">Class</span>
                         <input type="text" class="form-control"name="level" value={tempTicket.level} onChange={sync} />
                     </div>
-                    <div class="input-group mb-3 card-title">
-                        <span class="input-group-text" >Base Price</span>
-                        <input type="number" class="form-control" name="base_price" value={tempTicket.base_price} onChange={sync} />
+                    <div class="input-group mb-1 card-title">
+                        <span class="input-group-text" >Price</span>
+                        <input type="number" class="form-control" name="base_price" value={tempTicket.effectivePrice} onChange={sync} />
                     </div>
+                    <p className="text-secondary fs-6 mx-5">Discout applied = under 14=20% | Over 65=40%</p>
                     <div>
-                        <button className="btn btn-danger me-4" onClick={clear}>CANCEL</button>
+                    <Link class="btn btn-danger me-2" to={"/bookticket/"+tempTicket.passenger_id}>BACK</Link>
+                        <button className="btn btn-warning me-2" onClick={clear}>CLEAR</button>
                         <button className="btn btn-success " onClick={insert}>SAVE</button>
                     </div>
                 </div>

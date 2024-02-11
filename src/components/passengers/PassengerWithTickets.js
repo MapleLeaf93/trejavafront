@@ -24,11 +24,13 @@ export default function PassengerWithTickets(props)
     return(
         <>
             <div className="row">
-                <div className="col-4 p-4">
+                <div className="col-3 p-4" style={{minWidth:"230px"}}>
                     <div class="card sticky-top" style={{top:"100px"}}>
                         <div class="card-body">
                             <h5 class="card-title">{passenger.name} {passenger.surname}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Age: {passenger.age}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Ticket acquistati: {passenger.totTicket}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Totale spesa: {passenger.totExp}€</h6>
                         </div>
                     </div>
                     <br/>
@@ -37,7 +39,7 @@ export default function PassengerWithTickets(props)
                     </div>
                     
                 </div>
-                <div className="col-8 bg-light pt-4">
+                <div className="col-9 bg-light pt-4 pe-5">
                    <div className="row">
                         {passenger.ticketBought!=null &&passenger.ticketBought.map(t=> <TicketOverview t={t} key={t.id}/>)}
                    </div>
