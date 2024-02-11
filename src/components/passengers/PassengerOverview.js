@@ -14,7 +14,8 @@ export default function PassengerOverview({id,name,surname,age,deletePassenger})
                         <br/><br/>
                         <h3 class="card-title">{name} {surname}</h3>
                         <h4 class="card-subtitle mb-2 text-muted">Age: {age}</h4>
-                        <Link class="btn btn-primary" to={"/passengerdetails/"+id}>DETTAGLIO</Link>
+                        <br/>
+                        <Link class="btn btn-primary" to={"/passengerdetails/"+id}>DETAILS</Link>
                     </div>
                 </div>
             </div>
