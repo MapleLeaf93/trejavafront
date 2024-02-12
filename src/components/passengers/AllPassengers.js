@@ -9,8 +9,8 @@ export default function AllPassengers(props)
     const [flicker,setFlicker] = useState(false);
 
 
-    const [mAge,setMin] = useState(18);
-    const [MAge,setMax] = useState(30);
+    const [mAge,setMin] = useState(13);
+    const [MAge,setMax] = useState(66);
     const nomIn = useRef(null);
     const minIn = useRef(null);
     const maxIn = useRef(null);
@@ -76,9 +76,9 @@ export default function AllPassengers(props)
                         <input type="text" ref={nomIn} class="form-control" onChange={()=>setFlicker(!flicker)} />
                     </div>
                     <label for="customRange1" class="form-label">Età Min: {mAge}</label>
-                    <input type="range" ref={minIn} min={18} max={30} defaultValue={18} class="form-range" id="customRange1" onChange={(e) => setMin(e.target.value)}/>
+                    <input type="range" ref={minIn} min={13} max={66} defaultValue={13} class="form-range" onChange={(e) => setMin(e.target.value)}/>
                     <label for="customRange1" class="form-label">Età Max {MAge}</label>
-                    <input type="range" ref={maxIn} min={18} max={30} class="form-range" id="customRange1" onChange={(e) => setMax(e.target.value)}/>
+                    <input type="range" ref={maxIn} min={13} max={66} defaultValue={66} class="form-range" onChange={(e) => setMax(e.target.value)}/>
                     <br/><br/>
                 </div>
             <div className="col-9 pe-5">
